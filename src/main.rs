@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 
 mod plugins;
-use plugins::GamefieldPlugin;
+use plugins::{GamefieldPlugin, TilePlugin};
 
 fn main() {
     App::build()
@@ -14,5 +14,6 @@ fn main() {
         })
         .add_plugins(DefaultPlugins)
         .add_plugin(GamefieldPlugin)
+        .add_plugin(TilePlugin)
         .run();
 }
